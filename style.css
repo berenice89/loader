@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #ff5e6c;
+}
+
+h1 {
+    color: #2f1728;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.loader1 {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+
+}
+
+.dots {
+
+    width: 60px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 100px auto;
+}
+
+.dot1, .dot2, .dot3, .dot4, .dot5 {
+
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+
+}
+
+.dot1 {
+    animation: balance 1.8s infinite ease-in-out;
+    animation-delay: 1s;
+
+}
+
+.dot5 {
+    animation: balanceInv 1.8s infinite ease-in-out;
+    animation-delay: 2s;
+}
+
+
+@keyframes balance{
+    0%, 30%, 70%, 100%{transform: translateX(0px)}
+    50%{transform: translateX(-20px)}
+}
+
+@keyframes balanceInv{
+    0%, 30%, 70%, 100%{transform: translateX(0px)}
+    50%{transform: translateX(20px)}
+}
+
